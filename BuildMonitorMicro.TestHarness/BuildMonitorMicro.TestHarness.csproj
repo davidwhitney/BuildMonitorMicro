@@ -30,11 +30,8 @@
   </PropertyGroup>
   <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
   <ItemGroup>
-    <Compile Include="Console.cs" />
-    <Compile Include="ConsoleWindow.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.SPOT.Graphics">
@@ -45,12 +42,19 @@
     </Reference>
     <Reference Include="Microsoft.SPOT.TinyCore">
     </Reference>
+    <Reference Include="System.Http" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx" />
+    <ProjectReference Include="..\BuildMonitorMicro\BuildMonitorMicro.csproj">
+      <Project>{5E605C39-0699-4E19-BD98-4B4E24EE4E1A}</Project>
+      <Name>BuildMonitorMicro</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroUnit\MicroUnit.csproj">
+      <Project>{BCA9C0C3-5B2F-4CF7-A5BE-3786655E372F}</Project>
+      <Name>MicroUnit</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Arial14.tinyfnt" />
-    <EmbeddedResource Include="Resources\Small.tinyfnt" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

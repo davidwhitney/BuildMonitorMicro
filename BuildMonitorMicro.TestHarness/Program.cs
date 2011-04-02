@@ -1,23 +1,15 @@
-﻿using System.Threading;
-using Microsoft.SPOT.Input;
+﻿using System;
+using System.Reflection;
+using MicroUnit;
 
 namespace BuildMonitorMicro.TestHarness
 {
     public class Program : Microsoft.SPOT.Application
     {
-        public static void Main()
+        public static void Main(string [] eventArgs)
         {
-            Console.ReportTimeStamps = true;
-            Console.UseRelativeTime = true;
-
-            for (int i = 1; i <= 25; i++)
-            {
-                Console.WriteLine("Hi from console line " + i);
-
-                Thread.Sleep(i * 10);
-            }
+            var runner = new TestRunner();
+            runner.RunTests();
         }
-
-        
     }
 }
