@@ -5,7 +5,10 @@ using SecretLabs.NETMF.Hardware.NetduinoPlus;
 
 namespace BuildMonitorMicro.Hardware
 {
-    public class StatusLeds
+    public class NetduinoPlusNetworkCardDriver
     {
+        public void Enable(string ipAddress, string macAddress)
+        {
+        }
     }
 }
