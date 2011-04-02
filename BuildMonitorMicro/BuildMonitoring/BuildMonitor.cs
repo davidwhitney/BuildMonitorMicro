@@ -25,6 +25,16 @@ namespace BuildMonitorMicro.BuildMonitoring
                                                                      BuildFailed buildFailedCallback, 
                                                                      FailedToEvaluateBuildStatus failedToEvaluateBuildStatus)
         {
+            if(configuration == null)
+            {
+                throw new ArgumentNullException("configuration");
+            }
+
+            if (httpChannel == null)
+            {
+                throw new ArgumentNullException("httpChannel");
+            }
+
             _configuration = configuration;
             _httpChannel = httpChannel;
             _buildSuccessfulCallback = buildSuccessfulCallback;

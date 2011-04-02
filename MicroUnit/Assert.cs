@@ -74,7 +74,27 @@ namespace MicroUnit
 
             throw new InvalidOperationException("Code should have failed by this point.");
         }
+
+        public static void That(string predicate, ThatStringContainsDeligate expectedToContainThisValue)
+        {
+            var expectedValue = expectedToContainThisValue();
+
+            if (predicate.LastIndexOf(expectedValue) <= -1)
+            {
+                Fail("Expected string containing '" + expectedValue + "'.");
+            }
+        }
     }
+
+    public static class Is
+    {
+        public static ThatStringContainsDeligate StringContaining(string expectedValue)
+        {
+            return () => (expectedValue);
+        }
+    }
+
+    public delegate string ThatStringContainsDeligate();
 
     public delegate void AssertThrowsItemWhichReturnsVoid();
     public delegate object AssertThrowsItemWhichReturnsAnObject();
