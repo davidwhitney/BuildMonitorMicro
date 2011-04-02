@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildMonitorMicro", "BuildMonitorMicro\BuildMonitorMicro.csproj", "{5E605C39-0699-4E19-BD98-4B4E24EE4E1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildMonitorMicro.TestHarness", "BuildMonitorMicro.TestHarness\BuildMonitorMicro.TestHarness.csproj", "{774C0485-38CD-460A-A60F-BBD3C5E291C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{5E605C39-0699-4E19-BD98-4B4E24EE4E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E605C39-0699-4E19-BD98-4B4E24EE4E1A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5E605C39-0699-4E19-BD98-4B4E24EE4E1A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{774C0485-38CD-460A-A60F-BBD3C5E291C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{774C0485-38CD-460A-A60F-BBD3C5E291C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{774C0485-38CD-460A-A60F-BBD3C5E291C7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{774C0485-38CD-460A-A60F-BBD3C5E291C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{774C0485-38CD-460A-A60F-BBD3C5E291C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{774C0485-38CD-460A-A60F-BBD3C5E291C7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
