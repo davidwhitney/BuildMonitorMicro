@@ -3,7 +3,6 @@ using MicroUnit.Exceptions;
 
 namespace MicroUnit
 {
-
     public static class Assert
     {
         public static void Pass(string message = null)
@@ -79,16 +78,18 @@ namespace MicroUnit
             throw new InvalidOperationException("Code should have failed by this point.");
         }
 
-        public delegate string ThatStringContainsDeligate();
 
-        public static void That(string predicate, ThatStringContainsDeligate expectedToContainThisValue)
+        public static void That(string predicate, IsInstance.StringContainsContainerDelegate expectedToContainThisValue)
         {
-            var expectedValue = expectedToContainThisValue();
+            var delegateContainer = expectedToContainThisValue();
+            var contains = delegateContainer.Is.StringContaining(predicate, delegateContainer.Value);
 
-            if (predicate.LastIndexOf(expectedValue) <= -1)
-            {
-                Fail("Expected string containing '" + expectedValue + "'.");
-            }
+            if (contains) return;
+
+            var message = delegateContainer.Is.Inverse ? "Expected string NOT containing" : "Expected string containing";
+            message += " '" + delegateContainer.Value + "'.";
+
+            Fail(message);
         }
     }
 }
