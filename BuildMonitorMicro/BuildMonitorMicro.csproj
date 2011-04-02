@@ -36,6 +36,8 @@
     <Compile Include="BuildMonitoring\Http\IHttpChannel.cs" />
     <Compile Include="BuildMonitoring\IBuildMonitor.cs" />
     <Compile Include="Configuration\BuildMonitorConfiguration.cs" />
+    <Compile Include="Hardware\Nic.cs" />
+    <Compile Include="Hardware\StatusLeds.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
