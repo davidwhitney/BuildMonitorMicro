@@ -7,5 +7,6 @@ namespace BuildMonitorMicro.BuildMonitoring
         void StartMonitoring();
         void StopMonitoring();
         void Configure(BuildMonitorConfiguration configuration);
+        BuildStatus PollServer();
     }
 }

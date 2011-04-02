@@ -31,6 +31,9 @@
   <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
   <ItemGroup>
     <Compile Include="BuildMonitoring\BuildMonitor.cs" />
+    <Compile Include="BuildMonitoring\BuildStatus.cs" />
+    <Compile Include="BuildMonitoring\Http\HttpChannel.cs" />
+    <Compile Include="BuildMonitoring\Http\IHttpChannel.cs" />
     <Compile Include="BuildMonitoring\IBuildMonitor.cs" />
     <Compile Include="Configuration\BuildMonitorConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

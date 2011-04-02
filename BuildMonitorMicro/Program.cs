@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using BuildMonitorMicro.BuildMonitoring;
+using BuildMonitorMicro.BuildMonitoring.Http;
 using BuildMonitorMicro.Configuration;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
@@ -17,6 +18,7 @@ namespace BuildMonitorMicro
 
         public static void Main()
         {
+            var httpChannel = new HttpChannel();
             var configuration = new BuildMonitorConfiguration
                                     {
                                         BuildServerStatusPageUri = new Uri("http://www.google.com"),
@@ -24,7 +26,7 @@ namespace BuildMonitorMicro
                                         FailedBuildString = "I r failed"
                                     };
 
-            _monitor = new BuildMonitor(configuration, OnSuccessfulBuild, OnFailedBuild, OnErrorDeterminingBuildStatus);
+            _monitor = new BuildMonitor(configuration, httpChannel, OnSuccessfulBuild, OnFailedBuild, OnErrorDeterminingBuildStatus);
             _monitor.StartMonitoring();
 
             while(true)
