@@ -31,7 +31,7 @@
   <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="Tests.cs" />
+    <Compile Include="BuildMonitoring\BuildMonitorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.SPOT.Graphics">

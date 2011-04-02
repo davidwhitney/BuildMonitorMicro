@@ -6,8 +6,7 @@ namespace BuildMonitorMicro.Test.Unit
     {
         public static void Main(string [] eventArgs)
         {
-            var runner = new TestRunner();
-            runner.RunTests();
+            TestRunner.RunTests();
         }
     }
 }
