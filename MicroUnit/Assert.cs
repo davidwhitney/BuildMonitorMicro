@@ -3,6 +3,7 @@ using MicroUnit.Exceptions;
 
 namespace MicroUnit
 {
+
     public static class Assert
     {
         public static void Pass(string message = null)
@@ -32,6 +33,9 @@ namespace MicroUnit
                 throw new AssertFailException("Assert True failed.");
             }
         }
+
+        public delegate void AssertThrowsItemWhichReturnsVoid();
+        public delegate object AssertThrowsItemWhichReturnsAnObject();
 
         public static Exception Throws(Type type, AssertThrowsItemWhichReturnsVoid methodWhichReturnsVoid)
         {
@@ -75,6 +79,8 @@ namespace MicroUnit
             throw new InvalidOperationException("Code should have failed by this point.");
         }
 
+        public delegate string ThatStringContainsDeligate();
+
         public static void That(string predicate, ThatStringContainsDeligate expectedToContainThisValue)
         {
             var expectedValue = expectedToContainThisValue();
@@ -85,17 +91,4 @@ namespace MicroUnit
             }
         }
     }
-
-    public static class Is
-    {
-        public static ThatStringContainsDeligate StringContaining(string expectedValue)
-        {
-            return () => (expectedValue);
-        }
-    }
-
-    public delegate string ThatStringContainsDeligate();
-
-    public delegate void AssertThrowsItemWhichReturnsVoid();
-    public delegate object AssertThrowsItemWhichReturnsAnObject();
 }
