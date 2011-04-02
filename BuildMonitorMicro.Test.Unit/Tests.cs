@@ -1,8 +1,6 @@
-﻿using System;
-using BuildMonitorMicro.BuildMonitoring;
-using Microsoft.SPOT;
+﻿using BuildMonitorMicro.BuildMonitoring;
 
-namespace BuildMonitorMicro.Test.Unit
+namespace BuildMonitorMicro.TestHarness
 {
     public class Tests
     {
