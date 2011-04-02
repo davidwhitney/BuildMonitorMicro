@@ -7,7 +7,7 @@ namespace MicroUnit
     public static class Console
     {
         public static Thread DispatcherThread { get; set; }
-        public static bool ReportTimeStamps { get; set; }
+        public static bool LogDateTime { get; set; }
 
         private static ConsoleUi _consoleUi;
 
@@ -24,7 +24,7 @@ namespace MicroUnit
 
         public static void WriteLine(string text)
         {
-            WriteLine(text, ReportTimeStamps);
+            WriteLine(text, LogDateTime);
         }
 
         public static void WriteLine(string text, bool timeStamp)

@@ -11,7 +11,7 @@ namespace MicroUnit
             var loader = new AssemblyLoader();
             var testMethods = loader.GatherTests();
 
-            Console.ReportTimeStamps = true;
+            Console.LogDateTime = true;
 
             foreach (var untypedTest in testMethods)
             {
