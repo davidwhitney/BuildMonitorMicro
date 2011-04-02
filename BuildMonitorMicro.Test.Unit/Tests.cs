@@ -1,6 +1,6 @@
 ﻿using BuildMonitorMicro.BuildMonitoring;
 
-namespace BuildMonitorMicro.TestHarness
+namespace BuildMonitorMicro.Test.Unit
 {
     public class Tests
     {

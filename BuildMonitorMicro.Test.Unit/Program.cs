@@ -1,8 +1,6 @@
-﻿using System;
-using System.Reflection;
-using MicroUnit;
+﻿using MicroUnit;
 
-namespace BuildMonitorMicro.TestHarness
+namespace BuildMonitorMicro.Test.Unit
 {
     public class Program : Microsoft.SPOT.Application
     {
